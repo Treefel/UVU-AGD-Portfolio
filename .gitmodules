@@ -1,0 +1,3 @@
+[submodule "UnityProject/AGD_Project/Assets/tool"]
+	path = UnityProject/AGD_Project/Assets/tool
+	url = https://github.com/Treefel/ArtisanDream.Tools.git
