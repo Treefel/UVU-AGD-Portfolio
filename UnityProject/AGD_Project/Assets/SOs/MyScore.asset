@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 0
   minValue: 0
-  maxValue: 3
+  maxValue: 15
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls: []
   onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueMax:
     m_PersistentCalls:
       m_Calls: []
