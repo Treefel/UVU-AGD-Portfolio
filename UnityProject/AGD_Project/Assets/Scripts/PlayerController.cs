@@ -19,26 +19,30 @@ public class PlayerController : MonoBehaviour
     Vector3 normalVector;
     Vector3 input;
 
-    public bool isTouchingPlanetSurface = false;
+    public bool isTouchingDemon = false;
     private Transform MainCameraTransform;
     public Transform CameraArmTransform;
 
     PlayerControls playerControls;
-    Animator anim;
+    // Animator anim;
 
     bool CanJump = true;
     bool slowDown = false;
+
+    public GameAction attackObj;
+    public GameAction spacePressed;
+    public BoolData demonInRange;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         MainCameraTransform = Camera.main.transform;
-        anim = GetComponent<Animator>();
+        // anim = GetComponent<Animator>();
         tmpGravity = gravity;
         tmpRotationSpeed = rotationSpeed;
 
         playerControls = new PlayerControls();
-        // playerControls.Movement.spaceKey.performed += Jump;
+        playerControls.Movement.spaceKey.performed += Attack;
     }
 
     private void OnEnable()
@@ -69,6 +73,16 @@ public class PlayerController : MonoBehaviour
     //     rotationSpeed = tmpRotationSpeed / 2f;
     // }
 
+    void Attack(InputAction.CallbackContext context)
+    {
+        spacePressed.RaiseAction();
+        if (demonInRange.Value == true)
+        {
+            Debug.Log("bingbong");
+            attackObj.RaiseAction();
+        }
+    }
+
     void RestoreGravity()
     {
         gravity = tmpGravity;
@@ -97,12 +111,12 @@ public class PlayerController : MonoBehaviour
 
         if (movement_dir != Vector3.zero)
         {
-            anim.SetBool("IsMoving", true);
+            // anim.SetBool("IsMoving", true);
             playerVisual.localRotation = Quaternion.LookRotation(Dir);
         }
         else
         {
-            anim.SetBool("IsMoving", false);
+            // anim.SetBool("IsMoving", false);
         }
         if (slowDown)
             rb.linearVelocity *= .5f;
@@ -149,7 +163,7 @@ public class PlayerController : MonoBehaviour
     {
         Quaternion targetRotation = Quaternion.FromToRotation(transform.up, normalVector) * transform.rotation;
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
-        if (isTouchingPlanetSurface && CanJump)
+        if (isTouchingDemon && CanJump)
             rotationSpeed = tmpRotationSpeed;
     }
 
@@ -168,20 +182,22 @@ public class PlayerController : MonoBehaviour
         return;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.transform == currentPlanet)
-        {
-            isTouchingPlanetSurface = true;
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.transform == currentPlanet)
+    //     {
+    //         isTouchingDemon = true;
+    //     }
+    // }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform == currentPlanet)
-        {
-            isTouchingPlanetSurface = false;
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     isTouchingDemon = true;
+    // }
+
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     isTouchingDemon = false;
+    // }
 
 }

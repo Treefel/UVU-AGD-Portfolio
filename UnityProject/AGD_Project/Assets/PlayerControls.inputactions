@@ -14,6 +14,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "spaceKey",
+                    "type": "Button",
+                    "id": "5844af23-0248-424a-a847-1074da019826",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -58,6 +67,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d8a1a98-f786-44da-913f-c2f9a4a139ed",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "spaceKey",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
