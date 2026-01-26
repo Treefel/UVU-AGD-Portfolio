@@ -43,17 +43,14 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            Debug.Log("Spawn Ball");
             sporeSpawn.RaiseAction();
         }
         if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("A");
             flipperL.RaiseAction();
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            Debug.Log("D");
             flipperR.RaiseAction();
         }
         else flipperDown.RaiseAction();

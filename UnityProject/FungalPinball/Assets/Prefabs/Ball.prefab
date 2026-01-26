@@ -122,8 +122,8 @@ Transform:
   m_GameObject: {fileID: 7870302600599531749}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.88, y: 4, z: 0.3}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 7.48, z: 0.3}
+  m_LocalScale: {x: 0.42, y: 0.42, z: 0.42}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1377177582947907808}
@@ -145,6 +145,7 @@ MonoBehaviour:
   LinePoints: 25
   TimeBetweenPoints: 0.01
   mouseCursor: {fileID: 11400000, guid: 1f94f1e6de0a34649b81f3fb3f92d35c, type: 2}
+  gravity: -9.81
   forceValue: 15
 --- !u!135 &8876249055302702392
 SphereCollider:
@@ -165,7 +166,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!120 &7294560839276853187
 LineRenderer:
@@ -287,7 +288,7 @@ Rigidbody:
   serializedVersion: 5
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -302,8 +303,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 8
+  m_CollisionDetection: 1
 --- !u!114 &3391240132775287938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,4 +417,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d245ac926af74d047a8c0684c937cf19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConstrainVelocity
-  maxSpeed: 12
+  maxSpeed: 15

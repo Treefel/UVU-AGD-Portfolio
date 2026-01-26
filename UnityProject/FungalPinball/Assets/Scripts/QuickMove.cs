@@ -25,7 +25,6 @@ public class QuickMove : MonoBehaviour
     public void RotateTo(Transform target)
     {
         var step = speed * Time.deltaTime;
-        Debug.Log("rotatingTo");
         // curObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, target.rotation, step);
         // curObject.transform.rotation = Quaternion.Slerp(transform.rotation, target.rotation, step);
         // curObject.transform.rotation = target.rotation;
@@ -37,9 +36,6 @@ public class QuickMove : MonoBehaviour
         if (ogState != rb.rotation)
         {
             var step = speed * Time.deltaTime;
-            Debug.Log("rotatingBack");
-            Debug.Log(rb.rotation);
-            Debug.Log(ogState);
             // curObject.transform.rotation = Quaternion.Slerp(transform.rotation, ogState.rotation, step);
             // curObject.transform.rotation = ogState.rotation;
             rb.MoveRotation(ogState);
@@ -49,7 +45,6 @@ public class QuickMove : MonoBehaviour
     public void ReturnToZero()
     {
         var step = speed * Time.deltaTime;
-        Debug.Log("rotatingBack");
         Quaternion zeroQuat = new Quaternion (0, 0, 0, 1);
         // curObject.transform.rotation = Quaternion.Slerp(transform.rotation, zeroQuat, step);
         // curObject.transform.rotation = zeroQuat;
