@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5981854782984389752}
   - component: {fileID: 4469590265321411184}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: BallDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,6 +145,11 @@ MonoBehaviour:
   LinePoints: 25
   TimeBetweenPoints: 0.01
   mouseCursor: {fileID: 11400000, guid: 1f94f1e6de0a34649b81f3fb3f92d35c, type: 2}
+  dirConstraint:
+  - -1
+  - 1
+  - -1
+  - 0
   gravity: -9.81
   forceValue: 15
 --- !u!135 &8876249055302702392

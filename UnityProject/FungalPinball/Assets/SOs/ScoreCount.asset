@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21667c5c1ee7a4111a1243f78270d1dd, type: 3}
   m_Name: ScoreCount
   m_EditorClassIdentifier: Assembly-CSharp::FloatData
-  value: 90
+  value: 10
   minValue: 0
   maxValue: 100
   valueOutOfRange:
@@ -32,7 +32,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: a26a251c265fcf443b2468de1c59bab4, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
-        m_MethodName: RaiseAction
+        m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

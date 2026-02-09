@@ -17,6 +17,10 @@ public class ProjectileShoot : MonoBehaviour
     [SerializeField]
     private Vector3Data mouseCursor;
 
+    // first two values are x constraints, second 2 values are y constraint
+    [SerializeField]
+    private float[] dirConstraint = new float[4] {-1f,1f,-1f,1f};
+
     private Rigidbody rb;
     public float gravity = -9.81f;
 
@@ -50,6 +54,11 @@ public class ProjectileShoot : MonoBehaviour
         //     GetDirection();
         //     addProjForce();
         // }
+    }
+
+    public void setDirConstraint(float[] newCon)
+    {
+        dirConstraint = newCon;
     }
 
     public void addProjForce()
@@ -92,6 +101,10 @@ public class ProjectileShoot : MonoBehaviour
             target.y / total,
             0
         );
+        if (dir.x <= dirConstraint[0]) dir.x = dirConstraint[0];
+        if (dir.x >= dirConstraint[1]) dir.x = dirConstraint[1];
+        if (dir.y <= dirConstraint[2]) dir.y = dirConstraint[2];
+        if (dir.y >= dirConstraint[3]) dir.y = dirConstraint[3];
         // float rad = (MathF.Atan2(target.y, target.x) + 450f) % 360f;
         // float degree = rad * 180f / MathF.PI;
         // Debug.Log(degree);

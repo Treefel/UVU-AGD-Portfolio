@@ -23,6 +23,11 @@ public class GameObjectList : ScriptableObject
         var newObj = obj;
         gameObjects.Add(newObj);
     }
+    // public void AddThisObjectToList()
+    // {
+    //     var newObj = this.gameObject;
+    //     gameObjects.Add(newObj);
+    // }
 
     public int GetIndex(GameObject obj)
     {
@@ -37,6 +42,10 @@ public class GameObjectList : ScriptableObject
     public void RemoveObjectAtIndex(int i)
     {
         gameObjects.RemoveAt(i);
+    }
+    public void DeleteObjectAtIndex(int i)
+    {
+        Destroy(gameObjects[i]);
     }
 
     public GameObject GetObjectAtIndex(int i)

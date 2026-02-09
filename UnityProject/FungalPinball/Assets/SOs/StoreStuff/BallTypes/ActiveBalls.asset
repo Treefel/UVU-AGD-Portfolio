@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f97b1ffafe804442886d0b5e1a42f095, type: 3}
-  m_Name: Test2
-  m_EditorClassIdentifier: Assembly-CSharp::GameAction
+  m_Script: {fileID: 11500000, guid: f933511b2fdbb6a4c822fe1b5b9bbf96, type: 3}
+  m_Name: ActiveBalls
+  m_EditorClassIdentifier: Assembly-CSharp::GameObjectList
+  gameObjects: []
+  index: 0

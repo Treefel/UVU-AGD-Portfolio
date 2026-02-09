@@ -35,25 +35,26 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            shoot.RaiseAction();
+            shoot.Raise();
         }
         if (Input.GetButtonUp("Fire1"))
         {
-            shootEnd.RaiseAction();
+            shootEnd.Raise();
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            sporeSpawn.RaiseAction();
+            Debug.Log("spawning");
+            sporeSpawn.Raise();
         }
         if (Input.GetKey(KeyCode.A))
         {
-            flipperL.RaiseAction();
+            flipperL.Raise();
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            flipperR.RaiseAction();
+            flipperR.Raise();
         }
-        else flipperDown.RaiseAction();
+        else flipperDown.Raise();
     }
 
 
