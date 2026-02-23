@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21667c5c1ee7a4111a1243f78270d1dd, type: 3}
   m_Name: ScoreTotal
   m_EditorClassIdentifier: Assembly-CSharp::FloatData
-  value: 1435
+  value: 1470
   minValue: 0
   maxValue: 9999
   valueOutOfRange:

@@ -1,11 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "Collections/GameObjectList")]
 public class GameObjectList : ScriptableObject
 {
     public List<GameObject> gameObjects;
     public int index;
+
+    public UnityEvent OnListEmpty;
+    public UnityEvent OnListCountChange;
+
+    private int counting;
     
     public void RandomizeIndex()
     {
@@ -22,6 +29,7 @@ public class GameObjectList : ScriptableObject
     {
         var newObj = obj;
         gameObjects.Add(newObj);
+        OnListCountChange.Invoke();
     }
     // public void AddThisObjectToList()
     // {
@@ -46,6 +54,15 @@ public class GameObjectList : ScriptableObject
     public void DeleteObjectAtIndex(int i)
     {
         Destroy(gameObjects[i]);
+        CheckCount();
+    }
+
+    public void CheckCount()
+    {
+        if(GetCount() <= 0)
+        {
+            OnListEmpty.Invoke();
+        }
     }
 
     public GameObject GetObjectAtIndex(int i)

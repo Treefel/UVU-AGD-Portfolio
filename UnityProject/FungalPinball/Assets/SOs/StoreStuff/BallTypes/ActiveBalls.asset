@@ -12,5 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f933511b2fdbb6a4c822fe1b5b9bbf96, type: 3}
   m_Name: ActiveBalls
   m_EditorClassIdentifier: Assembly-CSharp::GameObjectList
-  gameObjects: []
+  gameObjects:
+  - {fileID: 7870302600599531749, guid: 5c2568f2798883b4e949ba0b993d7585, type: 3}
+  - {fileID: 7870302600599531749, guid: 5c2568f2798883b4e949ba0b993d7585, type: 3}
+  - {fileID: 7870302600599531749, guid: 5c2568f2798883b4e949ba0b993d7585, type: 3}
+  - {fileID: 7870302600599531749, guid: d23e06c193bf454458dd788cc81021ab, type: 3}
   index: 0
+  OnListEmpty:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0e86faeaad9257e49a3b096f33fc5079, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnListCountChange:
+    m_PersistentCalls:
+      m_Calls: []

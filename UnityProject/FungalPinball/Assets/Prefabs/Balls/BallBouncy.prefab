@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1377177582947907808}
   - component: {fileID: 6342814150985379030}
   - component: {fileID: 3430134705593065212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3391240132775287938}
   - component: {fileID: 5981854782984389752}
   - component: {fileID: 4469590265321411184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BallBouncy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

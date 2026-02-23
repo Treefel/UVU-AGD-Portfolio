@@ -30,6 +30,7 @@ public class ProjectileShoot : MonoBehaviour
     private GameObject curObject;
     private bool prepFire;
     private bool fired;
+    
     // private Vector3 mousePos;
 
 
@@ -38,22 +39,6 @@ public class ProjectileShoot : MonoBehaviour
         curObject = this.gameObject;
         rb = curObject.GetComponent<Rigidbody>();
         // mousePos = mouseCursor.value;
-    }
-
-    void FixedUpdate()
-    {
-        // Debug.Log("rigidbody:" + rb.linearVelocity);
-        // Debug.Log("calcForce:" + (dir * forceValue));
-        //  if (Input.GetButton("Fire1"))
-        // {
-        //     prepFire = true;
-        //     trackMouse();
-        // }
-        // if (Input.GetButtonUp("Fire1"))
-        // {
-        //     GetDirection();
-        //     addProjForce();
-        // }
     }
 
     public void setDirConstraint(float[] newCon)
@@ -108,9 +93,6 @@ public class ProjectileShoot : MonoBehaviour
         // float rad = (MathF.Atan2(target.y, target.x) + 450f) % 360f;
         // float degree = rad * 180f / MathF.PI;
         // Debug.Log(degree);
-
-
-
     }
 
     private void DrawProjection()

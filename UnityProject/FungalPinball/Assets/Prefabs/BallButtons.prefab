@@ -123,7 +123,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5339075808529815731}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3464254284595961563}
+        m_TargetAssemblyTypeName: InventoryUIButtonBehaviour, Assembly-CSharp
+        m_MethodName: RemoveFromInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3464254284595961563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,8 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a3564c96c3c43428bb9545c564d1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryUIButtonBehaviour
-  invFullExit: {fileID: 11400000, guid: 066d43153b1ba5e4386211761612ad23, type: 2}
-  test: {fileID: 11400000, guid: 5cd2fb992d54ecd41ab8e9573147f790, type: 2}
+  inventoryDataObj: {fileID: 11400000, guid: 08ea4f6a13f95b247bdfedec6e17e890, type: 2}
 --- !u!114 &-419393650497485691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,30 +176,6 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2958966484906888155}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
-        m_MethodName: set_interactable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 3464254284595961563}
-        m_TargetAssemblyTypeName: InventoryUIButtonBehaviour, Assembly-CSharp
-        m_MethodName: WaitForAction
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 54f09283ae44e0841b7deefa73fb723d, type: 2}
         m_TargetAssemblyTypeName: GameObjectList, Assembly-CSharp
         m_MethodName: AddObjectToList
@@ -201,39 +188,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2958966484906888155}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   handlerList:
   - action: {fileID: 11400000, guid: 01f6d556ac06bf24994365870fd996e6, type: 2}
     actionEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3464254284595961563}
-          m_TargetAssemblyTypeName: InventoryUIButtonBehaviour, Assembly-CSharp
-          m_MethodName: WaitForAction
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        m_Calls: []
   - action: {fileID: 11400000, guid: 066d43153b1ba5e4386211761612ad23, type: 2}
     actionEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3464254284595961563}
-          m_TargetAssemblyTypeName: InventoryUIButtonBehaviour, Assembly-CSharp
-          m_MethodName: WaitForAction
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!1 &8623993021344020811
 GameObject:
   m_ObjectHideFlags: 0

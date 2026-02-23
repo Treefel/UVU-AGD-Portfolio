@@ -18,9 +18,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
   - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
   - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
+  - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
+  - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
+  - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
   - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
   - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
+  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
   - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
+  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
   - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
-  - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
-  ballMax: 20
+  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
+  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
+  itemMax: 15
