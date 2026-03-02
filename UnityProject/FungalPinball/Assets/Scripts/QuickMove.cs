@@ -7,9 +7,13 @@ public class QuickMove : MonoBehaviour
     private GameObject curObject;
     private Quaternion ogState;
     private Rigidbody rb;
+    public bool moving = false;
+    private int i = 0;
+    [SerializeField] private Vector3DataCollection collection;
 
     void Awake()
     {
+        i = 0;
         curObject = this.gameObject;
         // ogState = new Quaternion(
         //     curObject.transform.rotation.x,
@@ -19,6 +23,12 @@ public class QuickMove : MonoBehaviour
         //     );
         rb = curObject.GetComponent<Rigidbody>();
         ogState = rb.rotation;
+    }
+
+    void Update()
+    {
+        if (moving && collection != null)
+            MoveBetweenPoints();
     }
 
     // Update is called once per frame
@@ -65,5 +75,25 @@ public class QuickMove : MonoBehaviour
         //     newOGState.y,
         //     newOGState.w
         //     );
+    }
+
+    public void MoveBetweenPoints()
+    {
+        
+        var step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, collection.vector3Datas[i].value, step);
+        if (curObject.transform.position == collection.vector3Datas[i].value)
+        {
+            i++;
+            if (i >= collection.vector3Datas.Count)
+            {
+                i = 0;
+            }
+        } 
+    }
+
+    public void SetMoving(bool newMoving)
+    {
+        moving = newMoving;
     }
 }
