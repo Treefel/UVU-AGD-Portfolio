@@ -15,18 +15,9 @@ MonoBehaviour:
   cash: {fileID: 11400000, guid: e4783f9c0a66fda4aaa6daf7bf3a4da4, type: 2}
   inventory:
   - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
-  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
-  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
-  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
+  - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
   - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
   - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
   - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
   - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
-  - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
-  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
-  - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
-  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
-  - {fileID: 11400000, guid: 4d0b4e8cf6d6dbc4ead48dda79b3abc6, type: 2}
-  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
-  - {fileID: 11400000, guid: 4b557a8c40a765a47accb3a17d56fb46, type: 2}
-  itemMax: 15
+  itemMax: 6

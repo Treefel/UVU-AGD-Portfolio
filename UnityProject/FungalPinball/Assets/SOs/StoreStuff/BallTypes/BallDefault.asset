@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BallDefault
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   price: 0
-  previewArt: {fileID: -2413806693520163455, guid: 9437f99a57fcf446f94aa6680bdb0dd0, type: 3}
+  previewArt: {fileID: 1439824114, guid: 6a069ed7f065e8d499870ef6fd3c98d6, type: 3}
   intLevel: 0
   floatLevel: 0
   gameArt: {fileID: 7870302600599531749, guid: 5c2568f2798883b4e949ba0b993d7585, type: 3}

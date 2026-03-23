@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BallBouncy
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   price: 5
-  previewArt: {fileID: -2413806693520163455, guid: 9437f99a57fcf446f94aa6680bdb0dd0, type: 3}
+  previewArt: {fileID: 1271316706, guid: 56f0712a73b1bd54f974f5ceaef04ec5, type: 3}
   intLevel: 0
   floatLevel: 0
   gameArt: {fileID: 7870302600599531749, guid: d23e06c193bf454458dd788cc81021ab, type: 3}
