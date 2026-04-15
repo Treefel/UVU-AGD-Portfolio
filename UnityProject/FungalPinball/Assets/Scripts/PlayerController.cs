@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using UnityEngine;
 
 // Controls player movement and rotation.
@@ -15,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private GameAction shootEnd;
     [SerializeField]
     private GameAction sporeSpawn;
+    private bool canSpawn;
+
     // public GameAction del;
     
     
@@ -25,7 +28,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         // rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
-        
+        canSpawn = true;
     }
 
 
@@ -41,9 +44,10 @@ public class PlayerController : MonoBehaviour
         {
             shootEnd.Raise();
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && canSpawn)
         {
             Debug.Log("spawning");
+            // canSpawn = false;
             sporeSpawn.Raise();
         }
         if (Input.GetKey(KeyCode.A))
@@ -57,6 +61,10 @@ public class PlayerController : MonoBehaviour
         else flipperDown.Raise();
     }
 
+    public void spawnToggle(bool value)
+    {
+        canSpawn = value;
+    }
 
     // Handle physics-based movement and rotation.
     // private void FixedUpdate()

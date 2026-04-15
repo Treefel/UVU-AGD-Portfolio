@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
+using System.Diagnostics;
+using System.Collections.Generic;
 
 public class InventoryConfigBehaviour : MonoBehaviour
 {
@@ -25,7 +27,7 @@ public class InventoryConfigBehaviour : MonoBehaviour
             {
                 elementData.ConfigButton(item);
             }
-            else Debug.Log("element data is null");
+            else UnityEngine.Debug.Log("element data is null");
         }
     }
 
@@ -40,7 +42,7 @@ public class InventoryConfigBehaviour : MonoBehaviour
             {
                 elementData.ConfigButton(item);
             }
-            else Debug.Log("element data is null");
+            else UnityEngine.Debug.Log("element data is null");
         }
     }
     public void AddRandomStoreInventoryItemsToUI(int number)
@@ -54,31 +56,38 @@ public class InventoryConfigBehaviour : MonoBehaviour
             {
                 elementData.ConfigButton(item);
             }
-            else Debug.Log("element data is null");
+            else UnityEngine.Debug.Log("element data is null");
         }
     }
 
     public void AddRandomInventoryItemsToUI(int number)
     {
-        int[] used = new int[] {};
-        for (int i = 0; i < number; i++)
+        HashSet<int> used = new HashSet<int>();
+        if (number > inventoryDataObj.inventoryDataObjList.Count)
+        {
+            AddAllInventoryItemsToUI();
+            return;
+        }
+        while (used.Count < number)
         {
             int index = Random.Range(0, inventoryDataObj.inventoryDataObjList.Count);
-            if (used.Contains(index))
-            {
-                Debug.Log("already added it");
-                i-=1;
-                continue;
-            }
-            var item = inventoryDataObj.inventoryDataObjList[index];
+            used.Add(index);
+        }
+        foreach (int i in used)
+        {
+            
+            var item = inventoryDataObj.inventoryDataObjList[i];
             var element = Instantiate(inventoryUIPrefab.gameObject, transform);
             var elementData = element.GetComponent<InventoryUIButtonBehaviour>();
             if(elementData != null)
             {
+                UnityEngine.Debug.Log("configuring button with item: " + item.ThisName);
                 elementData.ConfigButton(item);
+                
                 // inventoryDataObj.inventory[index].ConfigRaise();
             }
-            else Debug.Log("element data is null");
+            else UnityEngine.Debug.Log("element data is null");
+            
         }
     }
 

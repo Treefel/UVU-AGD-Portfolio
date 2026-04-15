@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21667c5c1ee7a4111a1243f78270d1dd, type: 3}
-  m_Name: ScoreTotal
+  m_Name: ScoreHighFlower
   m_EditorClassIdentifier: Assembly-CSharp::FloatData
-  value: 1470
+  value: 67.5
   minValue: 0
-  maxValue: 9999
+  maxValue: 999999
   valueOutOfRange:
     m_PersistentCalls:
       m_Calls: []

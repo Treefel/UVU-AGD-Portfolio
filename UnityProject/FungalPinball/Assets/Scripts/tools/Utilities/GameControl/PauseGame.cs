@@ -1,11 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Diagnostics;
 
 public class PauseGame : MonoBehaviour
 {
-    public void PauseToggle(Toggle obj)
+    private bool isPaused = false;
+    public void PauseToggle()
     {
-        Time.timeScale = obj.isOn ? 0 : 1;
-        AudioListener.pause = obj.isOn;
-    } 
+        if (!isPaused)
+        {
+            isPaused = true;
+            UnityEngine.Debug.Log("Pausing");
+            Time.timeScale = 0f;
+            AudioListener.pause = true;
+        }
+        else
+        {
+            isPaused = false;
+            UnityEngine.Debug.Log("Unpausing");
+            Time.timeScale = 1f;
+            AudioListener.pause = false;
+        }
+        
+    }
+     
 }

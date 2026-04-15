@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3266928208045279488}
   - component: {fileID: 1691570449309531706}
+  - component: {fileID: 2269421306466401329}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3266928208045279488
 Transform:
@@ -50,3 +51,63 @@ MonoBehaviour:
   shoot: {fileID: 11400000, guid: 71badff02844d9845bdf5667759a9799, type: 2}
   shootEnd: {fileID: 11400000, guid: d8a20e1e68ccb914a973f4602840054f, type: 2}
   sporeSpawn: {fileID: 11400000, guid: 9dc6d3692076e8a4cb25127d198efc1d, type: 2}
+--- !u!114 &2269421306466401329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6131130502501512170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caaab994aabc4d93886017f8f1ece6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameActionHandlers
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1691570449309531706}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: spawnToggle
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  handlerList:
+  - action: {fileID: 11400000, guid: 38ff4ed3e7e983d4f80f467cf199cddc, type: 2}
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1691570449309531706}
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_MethodName: spawnToggle
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - action: {fileID: 11400000, guid: 9dc6d3692076e8a4cb25127d198efc1d, type: 2}
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1691570449309531706}
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_MethodName: spawnToggle
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

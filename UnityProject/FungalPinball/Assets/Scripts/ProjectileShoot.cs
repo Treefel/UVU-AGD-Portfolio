@@ -96,8 +96,10 @@ public class ProjectileShoot : MonoBehaviour
     }
 
     private void DrawProjection()
-    {        
-        LineRenderer.enabled = true;
+    {
+        if (!fired)
+        {
+             LineRenderer.enabled = true;
         LineRenderer.positionCount = Mathf.CeilToInt(LinePoints / TimeBetweenPoints) + 1;
         Vector3 startPosition = curObject.transform.position;
         Vector3 curPosition = startPosition;
@@ -135,5 +137,6 @@ public class ProjectileShoot : MonoBehaviour
             // curPosition = point;
             // LineRenderer.SetPosition(i, point);
         }
+        } 
     }
 }

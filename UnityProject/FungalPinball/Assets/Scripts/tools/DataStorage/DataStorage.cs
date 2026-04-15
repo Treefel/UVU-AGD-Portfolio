@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DataStorage", menuName = "Utilities/Data Storage Object")]
@@ -59,6 +59,12 @@ public class DataStorage : ScriptableObject
         var data = obj.GetComponent<DataStorage>();
         if (data == null) return;
         data.LoadAllData();
+    }
+
+    public void SaveDataFromScriptableObject(ScriptableObject obj)
+    {
+        if (obj == null) return;
+        SaveData(obj);
     }
     
 }
